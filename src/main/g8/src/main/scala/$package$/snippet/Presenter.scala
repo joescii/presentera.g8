@@ -25,7 +25,7 @@ object Presenter {
   private lazy val passcode:String = {
     val jvmProp = Option(System.getProperty("presentera.passcode"))
     val envProp = Option(System.getenv("presentera_passcode"))
-    val default = Some("PresenteraMetal!")
+    val default = Some("$passcode$")
 
     List(jvmProp, envProp, default).flatten.head
   }
