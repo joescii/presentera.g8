@@ -37,4 +37,4 @@ libraryDependencies ++= {
 
 packageArchetype.java_application
 
-bashScriptConfigLocation := Some("${app_home}/../conf/jvmopts")
+bashScriptConfigLocation := Some("\${app_home}/../conf/jvmopts")
