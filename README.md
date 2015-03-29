@@ -3,6 +3,7 @@ presentera.g8
 
 g8 template for making awesome presentations with Presentera
 
+## Instructions
 1. [Install sbt](http://www.scala-sbt.org/release/tutorial/Setup.html).
 2. [Install giter8](https://github.com/n8han/giter8#installation).  ([Go here](https://github.com/n8han/conscript#linux-mac-windows) if you are sentenced to Windows)
 3. In a command console, `cd` to your code cave.
@@ -10,7 +11,7 @@ g8 template for making awesome presentations with Presentera
 5. Fill in the prompted blanks. 
     * Default values are in the square brackets. 
     * Feel free to them in as you wish, but only mess with the versions if you know what you're doing.
-    * Note you will be asked for a passcode for presenter mode.  This code is saved in the project in clear text, so think about this if you are pushing this project to GitHub.
+    * Note you will be asked for the `passcode` for presenter mode.  This code is saved in the project in clear text, so think about this if you are pushing this project to GitHub.
 6. cd to the newly created directory and do your `git init`, etc.
 7. `chmod +x ./presentera`
 8. `./presentera`
@@ -22,6 +23,7 @@ g8 template for making awesome presentations with Presentera
 Note that other browsers can tune into the show, with the presenter controlling advancement of the steps.
 If the browser has `localhost` as the hostname, it is assumed that user is the presenter.
 
+# Heroku
 This project is also ready for deployment on [Heroku](https://heroku.com/).
 In this case, no one can reach the application at `localhost`.
 Instead you navigate to `/presenter` on your app and enter the passcode.
