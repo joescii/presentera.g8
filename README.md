@@ -23,7 +23,7 @@ g8 template for making awesome presentations with Presentera
 Note that other browsers can tune into the show, with the presenter controlling advancement of the steps.
 If the browser has `localhost` as the hostname, it is assumed that user is the presenter.
 
-# Heroku
+## Heroku
 This project is also ready for deployment on [Heroku](https://heroku.com/).
 In this case, no one can reach the application at `localhost`.
 Instead you navigate to `/presenter` on your app and enter the passcode.
