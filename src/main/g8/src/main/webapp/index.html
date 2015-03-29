@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Type-Level Programming | The Subspace of Scala | by Joe Barnes @joescii</title>
+    
+    <meta name="description" content="." />
+    <meta name="author" content="Joe Barnes" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/type-prog.css" rel="stylesheet" />
+    <link data-lift="Browser.isFirefox" href="css/firefox.css" rel="stylesheet" />
+    <link data-lift="Browser.isNotFirefox" href="css/other.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+  <div id="title" class="step" data-x="-2000" data-bg="sc-none">
+    <h1>Type-Level Programming</h1>
+    <h2>The Subspace of Scala</h2>
+    <h3>Joe Barnes</h3>
+    <h2 id="follow">Follow along at http://<span data-lift="Host">localhost</span></h2>
+    <div>Powered by</div>
+    <img src="imgs/liftweb-logo-single-small2.png">
+  </div>
+
+  <div id="joe-barnes" class="step" data-bg="sc-none">
+    <div class="name">
+      <h1>Joe Barnes</h1>
+      <h2><i><a href="https://twitter.com/joescii" target="_blank">@joescii</a></i></h2>
+      <h2><i><a href="http://proseand.co.nz" target="_blank">prose :: and :: conz</a> </i></h2>
+    </div>
+    <ul>
+      <li>Primarily Java from 2004-2013</li>
+      <li>Started Scala late 2012</li>
+      <li>Started Scala at Mentor Graphics late 2013</li>
+      <li>Lift committer in July 2014</li>
+    </ul>
+  </div>
+
+  <div id="so-type-prog" class="step" data-x="-725" data-y="1000" data-bg="sc-none">
+    <div>So... Type programming...</div>
+    <div>What do <em>you</em> know about <em>that</em>, Joe??</div>
+  </div>
+
+  <div id="not-much" class="step" data-x="-2000" data-y="1000" data-bg="sc-none">
+    <div>Not much...</div>
+  </div>
+
+  <div id="shapeless-contributions" class="step" data-x="-3000" data-y="1000" data-bg="sc-none">
+    <div>I've made zero contributions to shapeless</div>
+  </div>
+
+  <div id="cats-contributions" class="step" data-x="-3000" data-y="2000" data-bg="sc-none">
+    <div>Also no contributions to Cats</div>
+    <img src="/imgs/cats.png">
+  </div>
+
+  <div id="cat-memes" class="step" data-x="-2500" data-y="1000" data-z="2000" data-bg="sc-none">
+    <div>Although I have contributed plenty of cat memes!</div>
+    <div class="img-collection">
+      <img class="appear1" src="/imgs/cat-meme1.jpg">
+      <img class="appear2" src="/imgs/cat-meme2.jpg">
+      <img class="appear3" src="/imgs/cat-meme3.jpg">
+      <img class="appear4" src="/imgs/cat-meme4.jpg">
+      <img class="appear5" src="/imgs/cat-meme6.jpg">
+      <img class="appear6" src="/imgs/cat-meme5.jpg">
+      <img class="appear7" src="/imgs/cat-meme7.jpg">
+    </div>
+  </div>
+
+  <div id="aha" class="step" data-x="-4000" data-y="150" data-bg="sc-none">
+    <div>I'm not here to share expertise on the subject,</div>
+    <div>but rather my <em>Aha!</em> moment.</div>
+  </div>
+
+  <div id="scala-is-like" class="step" data-x="2000" data-bg="sc-none">
+    Programming in Scala is like...
+  </div>
+
+  <div id="mario2-cover" class="step mario" data-x="3700" data-bg="sc-none">
+    <img src="imgs/cover-art.jpg">
+  </div>
+
+  <div id="mario2" class="step mario" data-x="5200" data-rotate-y="90" data-bg="sc-none">
+    <img src="imgs/Mario2.png">
+    <span>Normal value programming</span>
+  </div>
+
+  <div id="potion" class="step mario" data-x="6700" data-rotate-y="90" data-bg="sc-none">
+    <img src="imgs/Potion.png">
+    <span>A flask of type programming!</span>
+  </div>
+
+  <div id="door" class="step mario" data-x="8200" data-rotate-y="90" data-bg="sc-none">
+    <img src="imgs/Door.png">
+    <span>Where does this go?</span>
+  </div>
+
+  <div id="in-subspace" class="step mario" data-x="9700" data-rotate-y="-90" data-bg="ss-none">
+    <img src="imgs/Subcon.png">
+    <span>SUBSPACE!</span>
+  </div>
+
+  <div id="val" class="step" data-x="2000" data-y="-3000" data-bg="sc" data-lift="Scala.code?src=val">
+  </div>
+
+  <div id="lazy-val" class="step" data-x="2000" data-y="-2666" data-z="500" data-bg="sc" data-lift="Scala.code?src=lazy-val">
+  </div>
+
+  <div id="def" class="step" data-x="2000" data-y="-2333" data-z="1000" data-bg="sc" data-lift="Scala.code?src=def">
+  </div>
+
+  <div id="type" class="step" data-x="2000" data-y="-2000" data-z="1500" data-bg="ss" data-lift="Scala.code?src=type">
+  </div>
+
+  <div id="lets-compare" class="step" data-x="2000" data-y="-1000" data-z="1500" data-bg="sc">
+    <div>Let's compare values to types with the simplest domain ever</div>
+  </div>
+
+  <div id="boolval-declaration" class="step" data-x="1000" data-y="1000" data-bg="sc" data-lift="Scala.code?src=BoolValDecl">
+  </div>
+
+  <div id="boolval-body" class="step" data-x="1000" data-y="2000" data-z="500" data-rotate-y="45" data-bg="sc" data-lift="Scala.code?src=BoolValBody">
+  </div>
+
+  <div id="trueval" class="step" data-x="1000" data-y="3000" data-z="0" data-rotate-y="90" data-bg="sc" data-lift="Scala.code?src=TrueVal">
+  </div>
+
+  <div id="falseval" class="step" data-x="1000" data-y="4000" data-z="500" data-rotate-y="135" data-bg="sc" data-lift="Scala.code?src=FalseVal">
+  </div>
+
+  <div id="booltype-decl" class="step" data-x="2300" data-y="1000" data-bg="ss" data-lift="Scala.code?src=BoolTypeDecl">
+  </div>
+
+  <div id="bool-compare" class="step" data-x="1600" data-y="1000" data-z="1500" data-bg="sc" data-lift="Scala.diff?src=BoolDeclDiff">
+  </div>
+
+  <div id="booltype-body" class="step" data-x="1750" data-y="2000" data-z="-250" data-rotate-y="45" data-bg="ss" data-lift="Scala.code?src=BoolTypeBody">
+  </div>
+
+  <div id="or-not-compare" class="step" data-x="2900" data-y="2000" data-z="1650" data-rotate-y="45" data-bg="sc" data-lift="Scala.diff?src=BoolBodyDiff">
+  </div>
+
+  <div id="truetype" class="step" data-x="1000" data-y="3000" data-z="-1000" data-rotate-y="90" data-bg="ss" data-lift="Scala.code?src=TrueType">
+  </div>
+
+  <div id="true-compare" class="step" data-x="2500" data-y="3000" data-z="-500" data-rotate-y="90" data-bg="sc" data-lift="Scala.diff?src=TrueDiff">
+  </div>
+
+  <div id="falsetype" class="step" data-x="150" data-y="4000" data-z="-500" data-rotate-y="135" data-bg="ss" data-lift="Scala.code?src=FalseType">
+  </div>
+
+  <div id="false-compare" class="step" data-x="1950" data-y="4000" data-z="-650" data-rotate-y="135" data-bg="sc" data-lift="Scala.diff?src=FalseDiff">
+  </div>
+
+  <div id="test-bool" class="step" data-x="2000" data-y="5000" data-z="1400" data-rotate-y="180" data-bg="sc">
+    But how can we test our BoolType??
+  </div>
+
+  <div id="bool-type-specs1" class="step" data-x="1000" data-y="5000" data-z="2400" data-rotate-y="180" data-rotate="90" data-bg="ss" data-lift="Scala.code?src=BoolTypeSpecs1">
+  </div>
+
+  <div id="bool-type-specs2" class="step" data-x="2000" data-y="5000" data-z="2400" data-rotate-y="180" data-rotate="90" data-bg="ss" data-lift="Scala.code?src=BoolTypeSpecs2">
+  </div>
+
+  <div id="bool-type-specs3" class="step" data-x="3000" data-y="5000" data-z="2400" data-rotate-y="180" data-rotate="90" data-bg="ss" data-lift="Scala.code?src=BoolTypeSpecs3">
+  </div>
+
+  <div id="negative-cases" class="step" data-x="2000" data-y="4000" data-z="2400" data-rotate-y="180" data-rotate="180" data-bg="sc">
+    Ok, but what about negative test cases??
+  </div>
+
+  <div id="bool-type-specs4" class="step" data-x="4500" data-y="4000" data-z="2400" data-rotate-y="180" data-rotate="180" data-bg="ss" data-lift="Scala.code?src=BoolTypeSpecs4">
+  </div>
+
+  <div id="bool-type-specs5" class="step" data-x="4500" data-y="3000" data-z="2400" data-rotate-y="180" data-rotate="180" data-bg="ss" data-lift="Scala.code?src=BoolTypeSpecs5">
+  </div>
+
+  <div id="just-two-types" class="step" data-x="6500" data-y="1500" data-z="2400" data-bg="sc">
+    Well that was easy... It's just two types, really...
+  </div>
+
+  <div id="intval" class="step" data-x="6500" data-y="2500" data-z="2400" data-bg="sc" data-lift="Scala.code?src=IntVal">
+  </div>
+
+  <div id="intval-usage" class="step" data-x="6500" data-y="3500" data-z="2400" data-bg="sc" data-lift="Scala.code?src=IntValUsage">
+  </div>
+
+  <div id="inttype" class="step" data-x="8000" data-y="2500" data-z="2400" data-bg="ss" data-lift="Scala.code?src=IntType">
+  </div>
+
+  <div id="inttype-tests" class="step" data-x="8000" data-y="1500" data-z="2400" data-bg="ss" data-lift="Scala.code?src=IntTypeTests">
+  </div>
+
+  <div id="blah-blah" class="step" data-x="10000" data-y="1500" data-z="2400" data-bg="sc">
+    <div class="">
+      Types, types, and more types, blah, blah, blah.
+      What good is it??
+    </div>
+  </div>
+
+  <div id="unsafe-intlist" class="step" data-x="9000" data-y="2500" data-z="2400" data-rotate-y="-90" data-bg="sc" data-lift="Scala.code?src=UnsafeIntList">
+  </div>
+
+  <div id="unsafe-intlist-sum" class="step" data-x="9000" data-y="3500" data-z="2400" data-rotate-y="-90" data-bg="sc" data-lift="Scala.code?src=UnsafeIntListSum">
+  </div>
+
+  <div id="unsafe-intlist-specs" class="step" data-x="9000" data-y="4500" data-z="2400" data-rotate-y="-90" data-bg="sc" data-lift="Scala.code?src=UnsafeIntListSpecs">
+  </div>
+
+  <div id="unsafe-intnil" class="step" data-x="9000" data-y="5500" data-z="2400" data-rotate-y="-90" data-bg="sc" data-lift="Scala.code?src=UnsafeIntNil">
+  </div>
+
+  <div id="unsafe-intlistimpl" class="step" data-x="9000" data-y="6500" data-z="2400" data-rotate-y="-90" data-bg="sc" data-lift="Scala.code?src=UnsafeIntListImpl">
+  </div>
+
+  <div id="when" class="step" data-x="7000" data-y="9500" data-z="2400" data-rotate-y="-90" data-rotate="-90" data-bg="sc">
+    This implementation validates size at runtime. <br>
+    But <i>when</i> do we know the size?
+  </div>
+
+  <div id="compile-time" class="step dark" data-x="9000" data-y="7500" data-z="3000" data-rotate-y="90" data-rotate="-90" data-bg="ss">
+    Compile time! (The lists are immutable)
+  </div>
+
+  <div id="intlist" class="step" data-x="9000" data-y="2500" data-z="3700" data-rotate-y="-90" data-bg="ss" data-lift="Scala.code?src=IntList">
+  </div>
+
+  <div id="intlist-sum" class="step" data-x="9000" data-y="3500" data-z="3700" data-rotate-y="-90" data-bg="ss" data-lift="Scala.code?src=IntListSum">
+  </div>
+
+  <div id="intlist-specs" class="step" data-x="9000" data-y="4500" data-z="3700" data-rotate-y="-90" data-bg="ss" data-lift="Scala.code?src=IntListSpecs">
+  </div>
+
+  <div id="intnil-sum" class="step" data-x="9000" data-y="5500" data-z="3700" data-rotate-y="-90" data-bg="ss" data-lift="Scala.code?src=IntNilSum">
+  </div>
+
+  <div id="intlist-sum-compare" class="step" data-x="7500" data-y="5500" data-z="3000" data-rotate-y="-90" data-bg="sc" data-lift="Scala.diff?src=IntNilDiff">
+  </div>
+
+  <div id="intlistimpl-sum" class="step" data-x="9000" data-y="6500" data-z="3700" data-rotate-y="-90" data-bg="ss" data-lift="Scala.code?src=IntListImplSum">
+  </div>
+
+  <div id="intlist-mystery" class="step" data-x="9000" data-y="6500" data-z="5500" data-rotate-y="90" data-bg="ss" data-lift="Scala.code?src=IntListMystery">
+  </div>
+
+  <div id="intlist-concat" class="step" data-x="9000" data-y="6500" data-z="7000" data-rotate-y="90" data-bg="ss" data-lift="Scala.code?src=IntListConcat">
+  </div>
+
+  <div id="intnil-concat" class="step" data-x="9000" data-y="5500" data-z="5500" data-rotate-y="90" data-bg="ss" data-lift="Scala.code?src=IntNilConcat">
+  </div>
+
+  <div id="intlistimpl-concat" class="step" data-x="9000" data-y="5500" data-z="7000" data-rotate-y="90" data-bg="ss" data-lift="Scala.code?src=IntListImplConcat">
+  </div>
+
+  <div id="intlist-concat-specs" class="step" data-x="9000" data-y="4500" data-z="7000" data-rotate-y="90" data-bg="ss" data-lift="Scala.code?src=IntListConcatSpecs">
+  </div>
+
+  <div id="retro" class="step" data-x="9000" data-y="3500" data-z="" data-bg="sc">
+    <h1>Retrospective</h1>
+  </div>
+
+  <div id="retro1" class="step" data-x="8000" data-y="3500" data-z="" data-rotate="90" data-bg="sc">
+    <p>Types are not just the shape of my objects</p>
+  </div>
+
+  <div id="retro2" class="step" data-x="7000" data-y="3500" data-z="" data-rotate="180" data-bg="sc">
+    <p>Type programming expedites computation to compile time</p>
+  </div>
+
+  <div id="retro3" class="step" data-x="7000" data-y="4500" data-z="" data-rotate="90" data-bg="sc">
+    <p>This guarantees I see the errors, rather than my users</p>
+  </div>
+
+  <div id="retro4" class="step" data-x="8500" data-y="4500" data-z="" data-rotate="" data-bg="sc">
+    <p>Type validations propagate through my code base</p>
+  </div>
+
+  <div id="questions" class="step" data-x="9000" data-y="4000" data-z="2000" data-bg="sc">
+    Questions?
+  </div>
+
+  <div id="comments" class="step" data-x="8875" data-y="4250" data-z="2125" data-bg="sc">
+    Comments?
+  </div>
+
+  <div id="concerns" class="step" data-x="8750" data-y="4000" data-z="2250" data-bg="sc">
+    Concerns?
+  </div>
+
+  <div id="links" class="step" data-x="8750" data-y="4500" data-z="2125" data-bg="sc">
+    <h2><i><a href="/download">Download slides</a></i></h2>
+    <h2><i><a href="https://github.com/joescii/type-prog-impress" target="_blank">Presentation Source</a> </i></h2>
+  </div>
+</div>
+<div data-lift="IfAudience"><div data-lift="embed?what=slide-controls"></div></div>
+
+  <!--
+
+      So to make a summary of all the possible attributes used to position presentation steps, we have:
+
+      * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+          the canvas in pixels; their default value is 0;
+      * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+          the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+          are exactly the same;
+      * `data-scale` - defines the scale of step element; default value is 1
+
+      These values are used by impress.js in CSS transformation functions, so for more information consult
+      CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+
+  -->
+    <!--<div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">-->
+    <!--</div>-->
+
+
+<div data-lift="IfPresenter">
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+</div>
+
+<script src="js/highlight.min.js"></script>
+<script src="js/scala.min.js"></script>
+<script id="jquery" src="/classpath/jquery.js" type="text/javascript"></script>
+<script src="js/impress.js"></script>
+<div data-lift="IfAudience">
+  <div data-lift="comet?type=PresentationComet"></div>
+  <div data-lift="PresentationState"></div>
+</div>
+<script data-lift="IfAudience" src="js/impress-client.js"></script>
+<script data-lift="Presenter"></script>
+<script data-lift="IfPresenter" src="js/impress-presenter.js"></script>
+<script>impress().init();hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
+

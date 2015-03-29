@@ -1,0 +1,2 @@
+jetty.port=$PORT
+url=type-prog.herokuapp.com

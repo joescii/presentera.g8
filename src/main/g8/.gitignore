@@ -1,3 +1,4 @@
+console.devmode.log
 target/
 boot/
 lib_managed/
