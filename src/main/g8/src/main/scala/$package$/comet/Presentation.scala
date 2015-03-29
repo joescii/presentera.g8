@@ -1,5 +1,5 @@
-package code.comet
-
+package $package$
+package comet
 
 import net.liftweb.actor._
 import net.liftweb.http._

@@ -1,4 +1,5 @@
-package code.snippet
+package $package$
+package snippet
 
 import net.liftweb.util.Helpers._
 import java.net.InetAddress

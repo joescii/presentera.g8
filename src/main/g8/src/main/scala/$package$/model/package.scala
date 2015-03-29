@@ -1,4 +1,4 @@
-package code
+package $package$
 
 import net.liftweb.http.{S, SessionVar}
 

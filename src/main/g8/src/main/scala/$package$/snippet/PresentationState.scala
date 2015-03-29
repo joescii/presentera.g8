@@ -1,4 +1,5 @@
-package code.snippet
+package $package$
+package snippet
 
 import net.liftweb.http._
 import js._

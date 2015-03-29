@@ -1,4 +1,5 @@
-package code.rest
+package $package$
+package rest
 
 import java.io.ByteArrayInputStream
 
