@@ -11,7 +11,7 @@ import Loc._
 import net.liftmodules.JQueryModule
 import net.liftweb.http.js.jquery._
 
-import code.rest.Downloads
+import $package$.rest.Downloads
 
 /**
  * A class that's instantiated early and run.  It allows the application

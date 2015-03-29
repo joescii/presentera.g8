@@ -7,8 +7,8 @@ import JsCmds._
 import JE._
 import net.liftweb.util.Helpers._
 
-import code.comet.Presentation.Ask
-import code.comet.Presentation
+import comet.Presentation.Ask
+import comet.Presentation
 
 object PresentationState {
   def render = "*" #> Script(

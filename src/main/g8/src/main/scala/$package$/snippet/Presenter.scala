@@ -7,7 +7,7 @@ import JsCmds._
 import JE._
 import net.liftweb.util.Helpers._
 import net.liftweb.util.{PassThru, ClearNodes}
-import code.comet.Presentation
+import comet.Presentation
 
 import scala.xml.NodeSeq
 
