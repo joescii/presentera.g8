@@ -24,10 +24,10 @@ Note that other browsers can tune into the show, with the presenter controlling 
 If the browser has `localhost` as the hostname, it is assumed that user is the presenter.
 
 ## Editing
-Edit the slides/steps in `src/main/webapp/templates-hidden/steps.html`.
+Edit the slides/steps in `src/main/webapp/index.html`.
 Doctor up `src/main/webapp/css/impress.css` to your liking.
 If you're really feeling inspired, tinker with `src/main/webapp/js/impress.js`.
-Comments can be found throughout these files, as well as `src/main/webapp/index.html`.
+Comments can be found throughout these files to guide you along.
 After all, _Presentera_ is just [_impress.js_](https://github.com/bartaz/impress.js/) with a server backend.
 
 ## Heroku
