@@ -3,7 +3,7 @@ presentera.g8
 
 g8 template for making awesome presentations with Presentera
 
-## Instructions
+## Running
 1. [Install sbt](http://www.scala-sbt.org/release/tutorial/Setup.html).
 2. [Install giter8](https://github.com/n8han/giter8#installation).  ([Go here](https://github.com/n8han/conscript#linux-mac-windows) if you are sentenced to Windows)
 3. In a command console, `cd` to your code cave.
@@ -23,10 +23,18 @@ g8 template for making awesome presentations with Presentera
 Note that other browsers can tune into the show, with the presenter controlling advancement of the steps.
 If the browser has `localhost` as the hostname, it is assumed that user is the presenter.
 
+## Editing
+Edit the slides/steps in `src/main/webapp/templates-hidden/steps.html`.
+Doctor up `src/main/webapp/css/impress.css` to your liking.
+If you're really feeling inspired, tinker with `src/main/webapp/js/impress.js`.
+Comments can be found throughout these files, as well as `src/main/webapp/index.html`.
+After all, _Presentera_ is just [_impress.js_](https://github.com/bartaz/impress.js/) with a server backend.
+
 ## Heroku
 This project is also ready for deployment on [Heroku](https://heroku.com/).
-In this case, no one can reach the application at `localhost`.
+In this deployment, no one can reach the application at `localhost`.
 Instead you navigate to `/presenter` on your app and enter the passcode.
 You dictated the passcode when you created the project.
 However, if you're totally OSS then the passcode is on github for all to see.
 In that case, you can override the default by adding `presentera_passcode` as a _Config Variable_ under your Heroku application's _Settings_ tab.
+
