@@ -16,7 +16,7 @@ class ScreenShots extends FlatSpec with Chrome {
     def captureStep(i:Int) = capture to (i.toString)
     def advance() = new Actions(webDriver).sendKeys(Keys.PAGE_DOWN).perform()
 
-    Stream.continually(currentUrl).takeWhile(!_.endsWith(s"/#/$lastStepId")).zipWithIndex.foreach { case (url, i) =>
+    Stream.continually(currentUrl).takeWhile(!_.endsWith("/#/"+lastStepId)).zipWithIndex.foreach { case (url, i) =>
       waitForAnimation(1500)
       if(currentUrl endsWith "/#/ing") waitForAnimation(1500) // TODO: If you have a slow slide, wait longer
       captureStep(i)
