@@ -13,7 +13,7 @@ object Downloads extends RestHelper {
   lazy val headers = slides.map { bytes =>
     ("Content-type" -> "application/octet-stream") ::
     ("Content-length" -> bytes.length.toString) ::
-    ("Content-disposition" -> "attachment; filename=type-prog-scala.pdf") ::
+    ("Content-disposition" -> "attachment; filename=$name$.pdf") ::
     Nil
   }
 
