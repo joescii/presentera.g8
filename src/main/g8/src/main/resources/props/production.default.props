@@ -1,2 +1,2 @@
 jetty.port=\$PORT
-url=type-prog.herokuapp.com
+url=$name$.herokuapp.com

@@ -23,6 +23,16 @@ g8 template for making awesome presentations with Presentera
 Note that other browsers can tune into the show, with the presenter controlling advancement of the steps.
 If the browser has `localhost` as the hostname, it is assumed that user is the presenter.
 
+To let the audience know the URL, add this to your first slide:
+
+```html
+<div>Follow along! http://<span data-lift="Host">localhost</span></div>
+```
+
+If you are presenting from your local machine, then Presentera injects your IP address.
+Note that if you have VPN and stuff like that, the IP may be something your audience cannot reach.
+If you are presenting from Heroku, then it will put in the value of `url` as configured in `src/main/resources/props/production.default.props`.
+
 ## Editing
 Edit the slides/steps in `src/main/webapp/index.html`.
 Doctor up `src/main/webapp/css/impress.css` to your liking.
@@ -32,8 +42,8 @@ After all, _Presentera_ is just [_impress.js_](https://github.com/bartaz/impress
 
 ## Heroku
 This project is also ready for deployment on [Heroku](https://heroku.com/).
-In this deployment, no one can reach the application at `localhost`.
-Instead you navigate to `/presenter` on your app and enter the passcode.
+In this deployment, no one can reach the application at `localhost` preventing you from defaulting as the presenter.
+Instead you can navigate to `/presenter` on your app and enter the passcode.
 You dictated the passcode when you created the project.
 However, if you're totally OSS then the passcode is on github for all to see.
 In that case, you can override the default by adding `presentera_passcode` as a _Config Variable_ under your Heroku application's _Settings_ tab.
