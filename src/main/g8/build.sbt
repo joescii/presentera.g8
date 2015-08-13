@@ -1,6 +1,6 @@
 import NativePackagerKeys._
 
-name := "$name$"
+name := "$name$" // Note that this needs to match the name in Procfile for Heroku to work.
 
 organization := "$organization;format="lower"$"
 
