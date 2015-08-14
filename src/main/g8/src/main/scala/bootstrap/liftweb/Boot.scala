@@ -52,6 +52,23 @@ class Boot {
     JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
     JQueryModule.init()
 
+    // We're doing some evil stuff in the browser, so tell Lift to let us have our pitfalls.
+    LiftRules.securityRules = () => {
+      SecurityRules(content = Some(ContentSecurityPolicy(
+        styleSources = List(
+          ContentSourceRestriction.UnsafeInline,
+          ContentSourceRestriction.All            // We're being lazy and using google fonts
+        ),
+        fontSources = List(
+          ContentSourceRestriction.All            // Google fonts!
+        ),
+        scriptSources = List(
+          ContentSourceRestriction.UnsafeEval,
+          ContentSourceRestriction.Self
+        )
+      )))
+    }
+
     LiftRules.earlyResponse.append { (req: Req) =>
       if(Props.mode != Props.RunModes.Development &&
          req.path.partPath.headOption == Some("presenter") &&
