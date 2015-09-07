@@ -26,7 +26,7 @@ object Code {
     trimmed.mkString(newline)
   }).openOr("// Source not found!!!")
 
-  private def lang = S.attr("src").map(_.split("\\.").last match {
+  private def lang = S.attr("src").map(_.split("""\.""").last match {
     case "js" => "javascript"
     case other => other
   }).openOr("")
