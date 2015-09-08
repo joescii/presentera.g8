@@ -8,8 +8,10 @@ object RootBuild extends Build {
   lazy val project = Project(
     id = "$name$",
     base = file("."),
-    settings = Project.defaultSettings ++ Seq(
+    settings = Project.defaultSettings ++
+      Defaults.itSettings ++
+      Seq(
       liftEdition <<= liftVersion { _.substring(0,3) }
     )
-  )
+  ).configs( IntegrationTest )
 }

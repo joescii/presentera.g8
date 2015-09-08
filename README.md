@@ -53,7 +53,7 @@ Often when you give a talk, you will be asked to provide slides.
 That would be hard to do if you only have a web application like Presentera.
 Fortunately, we've taken advantage of [ScalaTest's Selenium support](http://scalatest.org/user_guide/using_selenium) to automate flipping through the slides and firing screenshots.
 Out of the box, Presentera will work if you are using Windows and have Chrome installed.
-Just execute `test` in the sbt console.
+Just execute `it:test` in the sbt console.
 Once it is done, you will have your screenshots in `target/screenshots`.
 Upload them to [smallpdf.com](http://smallpdf.com/jpg-to-pdf) to convert into a pdf document.
 Save the pdf document overwriting `src/main/resources/slides.pdf`.
