@@ -11,7 +11,7 @@ sbtsum=c74ce9787e64c3db246d740869a27117
 
 function download {
 	echo "downloading ${sbtjar}" 1>&2
-	curl -O "http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/${sbtver}/${sbtjar}"
+	curl -L -O "http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/${sbtver}/${sbtjar}"
 	mkdir -p project/ && mv ${sbtjar} project/${sbtjar}
 }
 
