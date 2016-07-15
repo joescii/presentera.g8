@@ -6,4 +6,5 @@ src_managed/
 project/plugins/project/
 project/target
 project/project
+project/sbt-launch.jar*
 .idea/
